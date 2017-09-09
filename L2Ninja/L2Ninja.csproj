@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Binaries\" />
+    <Folder Include="Includes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\application-pgp-encrypted.png" />
@@ -210,6 +211,10 @@
     <None Include="Resources\specialorder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(ProjectDir)\Includes" "$(TargetDir)\Includes\" /S /Y /D
+XCOPY "$(ProjectDir)\Temp" "$(TargetDir)\Temp\" /S /Y /D</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
