@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1851C223-4B99-432C-BEA2-4513E148F7F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>L2Ninja</RootNamespace>
+    <AssemblyName>L2Ninja</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>l2icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\Programming Pack\Libraries\MetroFramework\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\Programming Pack\Libraries\MetroFramework\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\Programming Pack\Libraries\MetroFramework\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMPToolPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMPToolPanel.Designer.cs">
+      <DependentUpon>BMPToolPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chronicles.cs" />
+    <Compile Include="CommandLine.cs" />
+    <Compile Include="FileEditPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileEditPanel.Designer.cs">
+      <DependentUpon>FileEditPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileEditRowPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileEditRowPanel.Designer.cs">
+      <DependentUpon>FileEditRowPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindDialog.cs" />
+    <Compile Include="INIEditorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INIEditorPanel.Designer.cs">
+      <DependentUpon>INIEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L2ASM.cs" />
+    <Compile Include="L2Encdec.cs" />
+    <Compile Include="MainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatchDialog.Designer.cs">
+      <DependentUpon>PatchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsPanel.Designer.cs">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGADecoder.cs" />
+    <Compile Include="ThemeUtil.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="UTXBrowserPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UTXBrowserPanel.Designer.cs">
+      <DependentUpon>UTXBrowserPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UTXParser.cs" />
+    <EmbeddedResource Include="BMPToolPanel.resx">
+      <DependentUpon>BMPToolPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileEditPanel.resx">
+      <DependentUpon>FileEditPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileEditRowPanel.resx">
+      <DependentUpon>FileEditRowPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INIEditorPanel.resx">
+      <DependentUpon>INIEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatchDialog.resx">
+      <DependentUpon>PatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanel.resx">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UTXBrowserPanel.resx">
+      <DependentUpon>UTXBrowserPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\sideimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Binaries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-pgp-encrypted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modelicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dragndrop.png" />
+    <None Include="Assets\pictureboxplaceholder.png" />
+    <None Include="Assets\livepreviewplaceholder.png" />
+    <Content Include="l2icon.ico" />
+    <None Include="Resources\search-icon.png" />
+    <None Include="Resources\patchicon.png" />
+    <None Include="Resources\application-run-icon.png" />
+    <None Include="Resources\c-program-icon-14267.png" />
+    <None Include="Resources\floppy_disk_save-512.png" />
+    <None Include="Resources\TextEditIcon.png" />
+    <Content Include="Temp\Readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\openicon.png" />
+    <None Include="Resources\unlock-icon-9.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\palette.png" />
+    <None Include="Resources\config.png" />
+    <None Include="Resources\xml.png" />
+    <None Include="Resources\specialorder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
