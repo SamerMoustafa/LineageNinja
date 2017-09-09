@@ -1,10 +1,10 @@
-#Lineage Ninja Project
+# Lineage Ninja Project
 
-##What is L2Ninja ?
+## What is L2Ninja ?
 
 L2Ninja is a desktop application based on .NET core that aim to help L2 Server and Client Developers to be able to work with L2 Files and do their routine task easily with the less bugs possible.
 
-##System Requirements :
+## System Requirements :
 
 – Operating System :
 
