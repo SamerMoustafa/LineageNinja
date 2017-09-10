@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="L2EncdecPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">includes/l2encdec</Value>
+      <Value Profile="(Default)">Includes/l2encdec</Value>
     </Setting>
     <Setting Name="UModelPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">includes/umodel</Value>
+      <Value Profile="(Default)">Includes/umodel</Value>
     </Setting>
     <Setting Name="L2ASMPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">includes/l2asm-disasm</Value>
+      <Value Profile="(Default)">Includes/l2asm-disasm</Value>
     </Setting>
     <Setting Name="DefaultChronicle" Type="System.String" Scope="User">
       <Value Profile="(Default)">3</Value>

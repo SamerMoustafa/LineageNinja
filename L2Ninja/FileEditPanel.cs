@@ -39,6 +39,8 @@ namespace L2Ninja
                 ThemeUtil.GetInstance().FixGroupBox(groupBox1);
                 menuStrip1.BackColor = ColorTranslator.FromHtml("#202020");
                 menuStrip1.ForeColor = Color.LightGray;
+                fileEditorGrid.Theme = MainPanel.GetStyle().Theme;
+                fileEditorGrid.Style = MainPanel.GetStyle().Style;
             }
             //fileEditorGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
@@ -366,6 +368,7 @@ namespace L2Ninja
                     string assembledFile = asm.Encrypt(chronicle);
                     if(assembledFile != null && File.Exists(assembledFile))
                     {
+                        SetState("Encoding Assembeled File..");
                         L2Encdec encdec = new L2Encdec();
                         encdec.AttachFile(assembledFile);
                         string EncryptedFile = encdec.EncryptDat();
@@ -373,14 +376,18 @@ namespace L2Ninja
                         {
                             String FinalFilePath = Application.StartupPath + "/Temp/" + CurrentFile;
                             File.Copy(EncryptedFile, FinalFilePath, true);
+                            SetState("Asking for Overwrite Permission...");
                             DialogResult result = MessageBox.Show("Would you Like to Overwrite the Original File ?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if(result == DialogResult.Yes)
                             {
                                 File.Copy(FinalFilePath, CurrentFilePath, true);
+                                SetState("File has been overwritten for you.");
                                 MessageBox.Show("File Successfully Updated");
+
                             }
                             else if (result == DialogResult.No)
                             {
+                                SetState("Asking for Saving Location ...");
                                 SaveFileDialog Save = new SaveFileDialog();
                                 Save.FileName = Path.GetFileNameWithoutExtension(CurrentFile);
                                 Save.Title = "Save to ...";
@@ -390,6 +397,7 @@ namespace L2Ninja
                                 if(res == DialogResult.OK)
                                 {
                                     File.Copy(FinalFilePath, Save.FileName, true);
+                                    SetState("File Saved Successfully");
                                 }
                             }
                         }

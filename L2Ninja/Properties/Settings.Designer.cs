@@ -25,7 +25,7 @@ namespace L2Ninja.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("includes/l2encdec")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Includes/l2encdec")]
         public string L2EncdecPath {
             get {
                 return ((string)(this["L2EncdecPath"]));
@@ -34,7 +34,7 @@ namespace L2Ninja.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("includes/umodel")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Includes/umodel")]
         public string UModelPath {
             get {
                 return ((string)(this["UModelPath"]));
@@ -43,7 +43,7 @@ namespace L2Ninja.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("includes/l2asm-disasm")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Includes/l2asm-disasm")]
         public string L2ASMPath {
             get {
                 return ((string)(this["L2ASMPath"]));

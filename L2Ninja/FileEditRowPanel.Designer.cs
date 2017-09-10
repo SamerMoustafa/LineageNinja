@@ -31,16 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.editElementPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,7 +56,7 @@
             this.editElementPanel.Location = new System.Drawing.Point(0, 0);
             this.editElementPanel.Name = "editElementPanel";
             this.editElementPanel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.editElementPanel.Size = new System.Drawing.Size(507, 437);
+            this.editElementPanel.Size = new System.Drawing.Size(513, 437);
             this.editElementPanel.TabIndex = 2;
             // 
             // panel3
@@ -71,18 +66,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 437);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(507, 67);
+            this.panel3.Size = new System.Drawing.Size(513, 67);
             this.panel3.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(22, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Color Picker";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cancelBtn
             // 
@@ -105,33 +90,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.BackgroundImage = global::L2Ninja.Properties.Resources.sideimage;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(507, 0);
+            this.panel2.Location = new System.Drawing.Point(513, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(285, 504);
+            this.panel2.Size = new System.Drawing.Size(279, 504);
             this.panel2.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 492);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tools";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(22, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(227, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Find Icons";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // FileEditRowPanel
             // 
@@ -144,8 +109,6 @@
             this.Load += new System.EventHandler(this.FileEditRowPanel_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -158,8 +121,5 @@
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
